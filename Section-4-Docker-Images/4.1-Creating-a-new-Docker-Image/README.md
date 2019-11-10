@@ -8,23 +8,30 @@
 2. Update apt repo
 3. Install dependencies using apt
 4. Install Python dependencies using pip
-5. Cpy source code to /opt folder
+5. Copy source code to /opt folder
 6. Run the web server using "flask" command
+
+
+
+##### Create Image Command
+
+```shell
+docker build <src_directory> -t <image_name>
+```
 
 
 
 ##### Create Image
 
 ```shell
-docker build <src_directory> -t <image_name>
-```
-
-```shell
 docker build . -t simple-python-web-app
 ```
 
 ```shell
-docker run -d simple-python-web-app -p 8888:8888
+docker run -d \
+   --name simplePythonWebApp \
+   --network=host \
+   simple-python-web-app
 ```
 
 
