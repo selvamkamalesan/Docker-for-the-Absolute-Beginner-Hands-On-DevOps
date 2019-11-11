@@ -10,6 +10,8 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
 sudo docker version
+
+sudo usermod -aG docker <user>
 ```
 
 ##### Test docker installation
